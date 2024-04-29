@@ -5,9 +5,9 @@ import { MobileNav } from "./mobile-nav";
 
 function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 lg:h-20">
-        <Package2 size={24} />
+    <header className="fixed top-0 left-1/2 z-[49] mx-auto flex max-h-screen w-screen max-w-9xl -translate-x-1/2 flex-col items-center justify-center p-3 opacity-100 transition-opacity lg:p-6">
+      <div className="relative z-[900] flex h-16 w-full items-center justify-between rounded-2xl border border-white/5 bg-white/5 px-6 backdrop-blur-lg md:px-4 lg:h-20">
+        <Package2 size={24} color="white" />
         <MainNav />
         <MobileNav />
       </div>

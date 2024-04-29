@@ -20,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThirdwebProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThirdwebProvider>
+        <main className="relative max-w-[100vw] overflow-x-hidden">
+          <ThirdwebProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThirdwebProvider>
+        </main>
       </body>
     </html>
   );

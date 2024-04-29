@@ -5,7 +5,7 @@ import { SiDiscord, SiX } from "@icons-pack/react-simple-icons";
 
 function MainNav() {
   return (
-    <div className="hidden md:flex w-full justify-between ml-4">
+    <div className="hidden md:flex w-full justify-between ml-4 text-white">
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <Link
           href="/docs"
