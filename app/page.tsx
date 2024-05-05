@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "@/assets/hero1.png";
 import Hero2 from "@/assets/hero2.png";
+import Token from "@/assets/token.png";
 import { Button } from "../components/ui/button";
 
 export default function Home() {
@@ -29,12 +30,15 @@ export default function Home() {
         />
       </div>
       <div className="w-full">
-        <div className="container flex flex-col justify-between gap-10 py-12 sm:py-14 md:flex-row md:gap-16 md:py-20 xl:items-center">
+        <div className="container grid grid-cols-1 items-center gap-10 py-12 sm:py-14 md:grid-cols-3 md:gap-16 md:py-20 xl:items-center">
           <div className="items-between flex-h-full flex max-w-lg grow flex-col gap-4 sm:gap-6 md:gap-16 ">
-            <h1 className="max-w-full  text-3xl font-bold leading-[107%] text-ruby-900 sm:max-w-none  sm:text-[60px]">
+            <h1 className="max-w-full text-3xl font-bold leading-[107%] text-ruby-900 sm:max-w-none  sm:text-[60px]">
               Play Green, Earn Clean
             </h1>
-            <p className="font-semibold uppercase leading-[150%] text-ruby-900">
+          </div>
+          <div className="flex flex-col items-center justify-center gap-4">
+            <Image src={Token} alt="eco token" />
+            <p className="font-semibold uppercase text-ruby-900">
               Powered by $ECO
             </p>
           </div>
