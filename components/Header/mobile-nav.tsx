@@ -5,7 +5,11 @@ import Link from "next/link";
 import { Separator } from "../ui/separator";
 import { SiDiscord, SiX } from "@icons-pack/react-simple-icons";
 
-function MobileNav() {
+type HeaderMenuLink = {
+  label: string;
+  href: string;
+};
+function MobileNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -23,33 +27,13 @@ function MobileNav() {
             <Package2 className="h-6 w-6" />
             <span className="sr-only">Acme Inc</span>
           </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            Dashboard
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            Orders
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            Products
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground hover:text-foreground"
-          >
-            Customers
-          </Link>
-          <Link href="#" className="hover:text-foreground">
-            Settings
-          </Link>
+          {menuLinks.map(({ label, href }) => {
+            return (
+              <Link href={href} passHref key={href}>
+                <span>{label}</span>
+              </Link>
+            );
+          })}
         </nav>
         <Separator className="my-4" />
         <div className="flex items-center justify-between">

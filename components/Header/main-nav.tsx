@@ -3,48 +3,21 @@ import { cn } from "../../lib/utils";
 import { Button } from "../ui/button";
 import { SiDiscord, SiX } from "@icons-pack/react-simple-icons";
 
-function MainNav() {
+type HeaderMenuLink = {
+  label: string;
+  href: string;
+};
+function MainNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
   return (
-    <div className="hidden md:flex w-full justify-between ml-4 text-white">
+    <div className="hidden md:flex w-full justify-between ml-10 text-white">
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
-        <Link
-          href="/docs"
-          className={cn("transition-colors hover:text-foreground/80")}
-        >
-          Docs
-        </Link>
-        <Link
-          href="/docs/components"
-          className={cn("transition-colors hover:text-foreground/80")}
-        >
-          Components
-        </Link>
-        <Link
-          href="/themes"
-          className={cn("transition-colors hover:text-foreground/80")}
-        >
-          Themes
-        </Link>
-        <Link
-          href="/examples"
-          className={cn("transition-colors hover:text-foreground/80")}
-        >
-          Examples
-        </Link>
-        <Link
-          href="/blocks"
-          className={cn("transition-colors hover:text-foreground/80")}
-        >
-          Blocks
-        </Link>
-        <Link
-          href="#"
-          className={cn(
-            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
-          )}
-        >
-          GitHub
-        </Link>
+        {menuLinks.map(({ label, href }) => {
+          return (
+            <Link href={href} passHref key={href}>
+              <span>{label}</span>
+            </Link>
+          );
+        })}
       </nav>
       <div className="flex items-center gap-4 text-sm">
         <div className="flex items-center gap-4">
