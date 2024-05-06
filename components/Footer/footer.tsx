@@ -1,14 +1,14 @@
-import { SiDiscord, SiX } from "@icons-pack/react-simple-icons";
+import { SiDiscord, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
 import { Button } from "../ui/button";
 
 function Footer() {
   return (
-    <div className="space-y-12 bg-blue-950 py-12 md:space-y-14 md:py-20 text-white">
+    <div className="space-y-12 bg-secondary-foreground/10 py-12 md:space-y-14 md:py-20">
       <div className="container relative flex w-full flex-col justify-between gap-14 xl:flex-row">
         <div className="space-y-auto">
           <div>Logo</div>
           <h1 className="bottom-0 mt-auto hidden w-max text-5xl font-bold leading-[120%] md:absolute md:block">
-            The magic of play.
+            Players, Unite to Sustain
           </h1>
         </div>
         <div className="flex flex-col gap-10 xl:flex-row">
@@ -146,8 +146,9 @@ function Footer() {
               <Button>Start Playing</Button>
             </div>
             <div className="bottom-0 right-0 flex gap-1.5 xl:absolute">
-              <SiDiscord className="" />
-              <SiX size={22} className="" />
+              <SiDiscord />
+              <SiX size={22} />
+              <SiTelegram />
             </div>
           </div>
         </div>

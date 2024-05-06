@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Hero from "@/assets/hero1.png";
-import Hero2 from "@/assets/hero2.png";
-import Token from "@/assets/token.png";
 import { Button } from "../components/ui/button";
+import { OrbitingCirclesDemo } from "../components/magicui/orbiting-circles-demo";
+
+import { GameSwiper } from "../components/Swiper/game-swiper";
+import { SubscribeForm } from "../components/subscribe-form";
+import { SiDiscord, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
 
 export default function Home() {
   return (
@@ -30,26 +33,60 @@ export default function Home() {
         />
       </div>
       <div className="w-full">
-        <div className="container grid grid-cols-1 items-center gap-10 py-12 sm:py-14 md:grid-cols-3 md:gap-16 md:py-20 xl:items-center">
+        <div className="container grid grid-cols-1 items-center py-12 sm:py-14 md:grid-cols-2 md:py-20 xl:items-center">
           <div className="items-between flex-h-full flex max-w-lg grow flex-col gap-4 sm:gap-6 md:gap-16 ">
-            <h1 className="max-w-full text-3xl font-bold leading-[107%] text-ruby-900 sm:max-w-none  sm:text-[60px]">
+            <h1 className="max-w-full text-3xl font-bold leading-[107%] sm:max-w-none sm:text-[60px]">
               Play Green, Earn Clean
             </h1>
+            <div className="max-w-md space-y-7 md:space-y-12">
+              <p className="leading-[150%] text-new-night-700">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae, rerum! Quod accusamus totam veniam maxime quam
+                aperiam. Quidem, in dolorem porro dicta velit obcaecati facilis
+                laudantium, voluptates atque expedita quibusdam!
+                <br />
+                <br /> Powered by $ECO
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col items-center justify-center gap-4">
-            <Image src={Token} alt="eco token" />
-            <p className="font-semibold uppercase text-ruby-900">
-              Powered by $ECO
-            </p>
+          <OrbitingCirclesDemo />
+        </div>
+      </div>
+      <div className="w-full">
+        <div className="container grid grid-cols-1 gap-6 items-center py-12 sm:py-14 md:grid-cols-2 md:py-20 xl:items-center">
+          <GameSwiper />
+          <div className="-order-1 md:order-last items-between flex-h-full flex max-w-lg grow flex-col gap-4 sm:gap-6 md:gap-16">
+            <h1 className="max-w-full text-3xl font-bold leading-[107%] sm:max-w-none sm:text-[60px]">
+              Explore Games
+            </h1>
+            <div className="max-w-md space-y-7 md:space-y-12">
+              <p className="leading-[150%] text-new-night-700">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae, rerum! Quod accusamus totam veniam maxime quam
+                aperiam. Quidem, in dolorem porro dicta velit obcaecati facilis
+                laudantium, voluptates atque expedita quibusdam!
+              </p>
+            </div>
           </div>
-          <div className="max-w-md space-y-7 md:space-y-12">
-            <p className="leading-[150%] text-new-night-700">
-              We are shaping a future where developers, creators, and players
-              can build new experiences together. Where you can truly own your
-              assets. And share in the collective growth of our ecosystem.
-              <br />
-              <br /> All made possible by the blockchain.
-            </p>
+        </div>
+      </div>
+      <div className="w-full bg-secondary py-8 2xl:py-20">
+        <div className="container grid grid-cols-1 gap-y-10 gap-x-16 md:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <h1 className="max-w-[300px] text-xl font-bold text-new-night-100 md:max-w-none lg:text-3xl">
+              Stay Connected
+            </h1>
+            <SubscribeForm />
+          </div>
+          <div className="flex flex-col gap-4">
+            <h1 className="max-w-[300px] text-xl font-bold text-new-night-100 md:max-w-none lg:text-3xl">
+              Join the Community
+            </h1>
+            <div className="flex items-center gap-4">
+              <SiDiscord />
+              <SiX size={22} />
+              <SiTelegram />
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "../../lib/utils";
 import { Button } from "../ui/button";
-import { SiDiscord, SiX } from "@icons-pack/react-simple-icons";
+import { SiDiscord, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
 
 type HeaderMenuLink = {
   label: string;
@@ -23,6 +23,7 @@ function MainNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
         <div className="flex items-center gap-4">
           <SiDiscord size={20} />
           <SiX size={18} />
+          <SiTelegram size={20} />
         </div>
         <Button>Lets Play</Button>
       </div>

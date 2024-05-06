@@ -9,20 +9,16 @@ export const menuLinks = [
     href: "/",
   },
   {
-    label: "Games",
-    href: "/games",
-  },
-  {
     label: "About",
     href: "/about",
   },
   {
-    label: "Whitepaper",
-    href: "/whitepaper",
+    label: "Games",
+    href: "/games",
   },
   {
-    label: "Contact",
-    href: "/contact",
+    label: "Whitepaper",
+    href: "/whitepaper",
   },
 ];
 function Navbar() {

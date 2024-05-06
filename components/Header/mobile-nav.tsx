@@ -3,7 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { Separator } from "../ui/separator";
-import { SiDiscord, SiX } from "@icons-pack/react-simple-icons";
+import { SiDiscord, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
 
 type HeaderMenuLink = {
   label: string;
@@ -40,6 +40,7 @@ function MobileNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
           <div className="flex items-center gap-4">
             <SiDiscord size={20} />
             <SiX size={18} />
+            <SiTelegram size={20} />
           </div>
           <Button>Lets Play</Button>
         </div>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThirdwebProvider } from "../lib/thirdweb";
 import Navbar from "../components/Header/navbar";
 import Footer from "../components/Footer/footer";
+import { Toaster } from "../components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="relative max-w-[100vw] overflow-x-hidden">
-          <ThirdwebProvider>
-            <Navbar />
-            {children}
-            <Footer />
-          </ThirdwebProvider>
+          <Navbar />
+          {children}
+          <Footer />
         </main>
+        <Toaster />
       </body>
     </html>
   );
