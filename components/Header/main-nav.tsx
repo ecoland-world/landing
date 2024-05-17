@@ -9,7 +9,7 @@ type HeaderMenuLink = {
 };
 function MainNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
   return (
-    <div className="hidden md:flex w-full justify-between ml-10 text-white">
+    <div className="hidden md:flex w-full justify-between ml-10 text-background">
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         {menuLinks.map(({ label, href }) => {
           return (

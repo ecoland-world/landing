@@ -6,6 +6,8 @@ import { OrbitingCirclesDemo } from "../components/magicui/orbiting-circles-demo
 import { GameSwiper } from "../components/Swiper/game-swiper";
 import { SubscribeForm } from "../components/subscribe-form";
 import { SiDiscord, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
+import { BentoDemo } from "../components/magicui/bento-grid-demo";
+import { Supporters } from "../components/supporters";
 
 export default function Home() {
   return (
@@ -32,7 +34,8 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
       </div>
-      <div className="w-full">
+      <Supporters />
+      <section className="w-full">
         <div className="container grid grid-cols-1 items-center py-12 sm:py-14 md:grid-cols-2 md:py-20 xl:items-center">
           <div className="items-between flex-h-full flex max-w-lg grow flex-col gap-4 sm:gap-6 md:gap-16 ">
             <h1 className="max-w-full text-3xl font-bold leading-[107%] sm:max-w-none sm:text-[60px]">
@@ -51,8 +54,8 @@ export default function Home() {
           </div>
           <OrbitingCirclesDemo />
         </div>
-      </div>
-      <div className="w-full">
+      </section>
+      <section className="w-full">
         <div className="container grid grid-cols-1 gap-6 items-center py-12 sm:py-14 md:grid-cols-2 md:py-20 xl:items-center">
           <GameSwiper />
           <div className="-order-1 md:order-last items-between flex-h-full flex max-w-lg grow flex-col gap-4 sm:gap-6 md:gap-16">
@@ -69,8 +72,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="w-full bg-secondary py-8 2xl:py-20">
+      </section>
+      <section className="w-full">
+        <div className="container">
+          <BentoDemo />
+        </div>
+      </section>
+      <div className="w-full bg-secondary py-8 2xl:py-20 mt-8">
         <div className="container grid grid-cols-1 gap-y-10 gap-x-16 md:grid-cols-2">
           <div className="flex flex-col gap-4">
             <h1 className="max-w-[300px] text-xl font-bold text-new-night-100 md:max-w-none lg:text-3xl">
