@@ -74,30 +74,13 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full">
-        <div className="container">
+        <div className="container py-12 mb-12">
+          <h1 className="max-w-full text-xl text-center font-bold leading-[107%] sm:max-w-none sm:text-[60px] mb-8">
+            Features
+          </h1>
           <BentoDemo />
         </div>
       </section>
-      <div className="w-full bg-secondary py-8 2xl:py-20 mt-8">
-        <div className="container grid grid-cols-1 gap-y-10 gap-x-16 md:grid-cols-2">
-          <div className="flex flex-col gap-4">
-            <h1 className="max-w-[300px] text-xl font-bold text-new-night-100 md:max-w-none lg:text-3xl">
-              Stay Connected
-            </h1>
-            <SubscribeForm />
-          </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="max-w-[300px] text-xl font-bold text-new-night-100 md:max-w-none lg:text-3xl">
-              Join the Community
-            </h1>
-            <div className="flex items-center gap-4">
-              <SiDiscord />
-              <SiX size={22} />
-              <SiTelegram />
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

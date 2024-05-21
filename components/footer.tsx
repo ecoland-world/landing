@@ -4,18 +4,19 @@ import Link from "next/link";
 import { DiscordLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Token from "@/assets/eco-token.png";
+import { SubscribeForm } from "./subscribe-form";
 
 const footerNavs = [
   {
-    label: "Product",
+    label: "About",
     items: [
       {
-        href: "/",
-        name: "Email Collection",
+        href: "/whitepaper",
+        name: "Whitepaper",
       },
       {
-        href: "/pricing",
-        name: "Pricing",
+        href: "/games",
+        name: "Games",
       },
       {
         href: "/faq",
@@ -27,15 +28,19 @@ const footerNavs = [
     label: "Community",
     items: [
       {
-        href: "/",
+        href: "https://discord.com/invite/ckffrhrywk",
         name: "Discord",
       },
       {
-        href: "/",
+        href: "https://twitter.com/EcoLandWorld",
         name: "Twitter",
       },
       {
-        href: "mailto:hello@chatcollect.com",
+        href: "https://t.me/ecoland_news",
+        name: "Telegram",
+      },
+      {
+        href: "mailto:hello@ecoland.world",
         name: "Email",
       },
     ],
@@ -58,17 +63,17 @@ const footerNavs = [
 
 const footerSocials = [
   {
-    href: "",
+    href: "https://discord.com/invite/ckffrhrywk",
     name: "Discord",
     icon: <SiDiscord className="h-5 w-5" />,
   },
   {
-    href: "",
+    href: "https://twitter.com/EcoLandWorld",
     name: "Twitter",
     icon: <SiX className="h-5 w-5" />,
   },
   {
-    href: "",
+    href: "https://t.me/ecoland_news",
     name: "Telegram",
     icon: <SiTelegram className="h-5 w-5" />,
   },
@@ -76,7 +81,7 @@ const footerSocials = [
 function Footer() {
   return (
     <footer>
-      <div className="mx-auto w-full max-w-screen-xl xl:pb-2">
+      <div className="mx-auto w-full max-w-screen-xl xl:pb-2 bg-secondary">
         <div className="md:flex md:justify-between px-8 p-4 py-16 sm:pb-16 gap-4">
           <div className="mb-12 flex-col flex gap-4">
             <Link href="/" className="flex items-center gap-2">
@@ -90,7 +95,9 @@ function Footer() {
               </span>
             </Link>
             <p className="max-w-xs">Level Up and Go Green</p>
+            <SubscribeForm />
           </div>
+
           <div className="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-3">
             {footerNavs.map((nav) => (
               <div key={nav.label}>
@@ -102,7 +109,7 @@ function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="cursor-pointer text-gray-400 hover:text-gray-200 duration-200 font-[450] text-sm"
+                        className="cursor-pointer text-muted hover:text-gray-600 duration-200 font-[450] text-sm"
                       >
                         {item.name}
                       </Link>
@@ -120,7 +127,7 @@ function Footer() {
               <Link
                 key={social.name}
                 href={social.href}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-600 fill-gray-500 hover:fill-gray-900 dark:hover:fill-gray-600"
+                className="text-black-500 hover:text-gray-600 fill-black-500 hover:fill-gray-900"
               >
                 {social.icon}
                 <span className="sr-only">{social.name}</span>

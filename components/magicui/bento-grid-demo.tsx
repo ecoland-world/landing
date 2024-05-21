@@ -1,54 +1,51 @@
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
-import {
-  BellIcon,
-  CalendarIcon,
-  FileTextIcon,
-  GlobeIcon,
-  InputIcon,
-} from "@radix-ui/react-icons";
-
+import { Users, Coins, Leaf, ArrowLeftRight, Blocks } from "lucide-react";
 const features = [
   {
-    Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    Icon: ArrowLeftRight,
+    name: "Interoperable tokens",
+    description:
+      "NFTs and $ECO are usable across all current and future games on the EcoLand platform, ensuring long-term value and utility for players",
     href: "/",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
   {
-    Icon: InputIcon,
-    name: "Full text search",
-    description: "Search through all your files in one place.",
+    Icon: Blocks,
+    name: "Agile Development",
+    description:
+      "Ensures continuous delivery of fresh content, keeping the platform engaging and dynamic",
     href: "/",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
   {
-    Icon: GlobeIcon,
-    name: "Multilingual",
-    description: "Supports 100+ languages and counting.",
+    Icon: Users,
+    name: "Experienced Team",
+    description:
+      "A robust foundation from a team with deep expertise in gaming and blockchain technologies",
     href: "/",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
   },
   {
-    Icon: CalendarIcon,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    Icon: Coins,
+    name: "Dual-Token Economy",
+    description:
+      "$ECO and the blockchain's native tokens, used on the marketplace for trading the NFTs",
     href: "/",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
   },
   {
-    Icon: BellIcon,
-    name: "Notifications",
+    Icon: Leaf,
+    name: "Environmental Contributions",
     description:
-      "Get notified when someone shares a file or mentions you in a comment.",
+      "Direct linkage between gameplay achievements and real-world environmental benefits",
     href: "/",
     cta: "Learn more",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
