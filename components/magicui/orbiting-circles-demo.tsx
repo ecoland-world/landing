@@ -1,10 +1,10 @@
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import Image from "next/image";
-import Clio from "@/assets/clio.png";
-import Box from "@/assets/box.png";
-import Hat from "@/assets/hat.png";
-import Shirt from "@/assets/shirt.png";
 import Token from "@/assets/eco-token.png";
+import Element1 from "@/assets/elements/element1.png";
+import Element2 from "@/assets/elements/element2.png";
+import Element3 from "@/assets/elements/element3.png";
+import Element4 from "@/assets/elements/element4.png";
 
 export function OrbitingCirclesDemo() {
   return (
@@ -26,7 +26,7 @@ export function OrbitingCirclesDemo() {
         delay={20}
         radius={80}
       >
-        <Image src={Clio} alt="Clio" className="h-full w-full" />
+        <Image src={Element1} alt="Clio" className="h-full w-full" />
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[100px] w-[100px] border-none bg-transparent"
@@ -34,7 +34,7 @@ export function OrbitingCirclesDemo() {
         delay={10}
         radius={80}
       >
-        <Image src={Box} alt="box" className="h-full w-full" />
+        <Image src={Element2} alt="box" className="h-full w-full" />
       </OrbitingCircles>
 
       {/* Outer Circles (reverse) */}
@@ -44,7 +44,7 @@ export function OrbitingCirclesDemo() {
         radius={190}
         duration={20}
       >
-        <Image src={Hat} alt="hat" className="h-full w-full" />
+        <Image src={Element3} alt="hat" className="h-full w-full" />
       </OrbitingCircles>
 
       <OrbitingCircles
@@ -54,7 +54,7 @@ export function OrbitingCirclesDemo() {
         duration={20}
         delay={20}
       >
-        <Image src={Shirt} alt="shirt" className="h-full w-full" />
+        <Image src={Element4} alt="shirt" className="h-full w-full" />
       </OrbitingCircles>
     </div>
   );

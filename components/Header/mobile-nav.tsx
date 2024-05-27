@@ -2,14 +2,34 @@ import { Menu, Package2 } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Image from "next/image";
+import Token from "@/assets/eco-token.png";
 import { Separator } from "../ui/separator";
 import { SiDiscord, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 type HeaderMenuLink = {
   label: string;
   href: string;
 };
-function MobileNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
+
+type SocialLink = {
+  href: string;
+  name: string;
+  icon: React.ReactNode;
+};
+function MobileNav({
+  menuLinks,
+  socialLinks,
+}: {
+  menuLinks: HeaderMenuLink[];
+  socialLinks: SocialLink[];
+}) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -20,12 +40,15 @@ function MobileNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
       </SheetTrigger>
       <SheetContent side="top">
         <nav className="grid gap-6 text-lg font-medium">
-          <Link
-            href="#"
-            className="flex items-center gap-2 text-lg font-semibold"
-          >
-            <Package2 className="h-6 w-6" />
-            <span className="sr-only">Acme Inc</span>
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src={Token}
+              className="h-8 w-8 text-primary"
+              alt="Ecoland logo"
+            />
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              Ecoland
+            </span>
           </Link>
           {menuLinks.map(({ label, href }) => {
             return (
@@ -38,11 +61,29 @@ function MobileNav({ menuLinks }: { menuLinks: HeaderMenuLink[] }) {
         <Separator className="my-4" />
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <SiDiscord size={20} />
-            <SiX size={18} />
-            <SiTelegram size={20} />
+            {socialLinks.map((social) => (
+              <Link
+                key={social.name}
+                href={social.href}
+                className="text-black-500 hover:text-gray-600 fill-black-500 hover:fill-gray-900"
+              >
+                {social.icon}
+                <span className="sr-only">{social.name}</span>
+              </Link>
+            ))}
           </div>
-          <Button>Lets Play</Button>
+          <TooltipProvider>
+            <Tooltip delayDuration={100}>
+              <TooltipTrigger asChild>
+                <Button className="cursor-not-allowed opacity-50">
+                  Let&apos;s Play
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Coming Soon!</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </SheetContent>
     </Sheet>

@@ -81,7 +81,7 @@ const footerSocials = [
 function Footer() {
   return (
     <footer>
-      <div className="mx-auto w-full max-w-screen-xl xl:pb-2 bg-secondary">
+      <div className="mx-auto w-full xl:pb-2 bg-secondary">
         <div className="md:flex md:justify-between px-8 p-4 py-16 sm:pb-16 gap-4">
           <div className="mb-12 flex-col flex gap-4">
             <Link href="/" className="flex items-center gap-2">
