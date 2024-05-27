@@ -13,15 +13,15 @@ export const menuLinks = [
   },
   {
     label: "About",
-    href: "/about",
+    href: "#about",
   },
   {
     label: "Games",
-    href: "/games",
+    href: "#games",
   },
   {
     label: "Whitepaper",
-    href: "/whitepaper",
+    href: "https://ecopaper.ecoland.world/",
   },
 ];
 const socialLinks = [
