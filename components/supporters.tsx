@@ -31,7 +31,7 @@ const companies = [
 export function Supporters() {
   return (
     <section
-      id="clients"
+      id="about"
       className="text-center mx-auto max-w-[80rem] px-6 md:px-8"
     >
       <div className="py-14">

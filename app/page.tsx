@@ -78,7 +78,7 @@ export default function Home() {
           <OrbitingCirclesDemo />
         </div>
       </section>
-      <section className="w-full">
+      <section className="w-full" id="games">
         <div className="container grid grid-cols-1 gap-6 items-center py-12 sm:py-14 md:grid-cols-2 md:py-20 xl:items-center">
           <GameSwiper />
           <div className="-order-1 md:order-last items-between flex-h-full flex max-w-lg grow flex-col gap-4 sm:gap-6 md:gap-16">
