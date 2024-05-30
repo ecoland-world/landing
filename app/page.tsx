@@ -25,9 +25,8 @@ export default function Home() {
           </h1>
           <div className="max-w-md space-y-6">
             <p className="text-xl leading-[120%] sm:text-[28px] text-white">
-              Dive into a universe of games with a cutting-edge economy, where
-              $ECO tokens and NFTs power a seamless, rewarding interconnected
-              adventure.
+              Dive into a universe of games , where $ECO token and NFTs power a
+              seamless, rewarding interconnected adventure.
             </p>
             <div className="flex gap-4">
               <TooltipProvider>
@@ -111,7 +110,7 @@ export default function Home() {
       <section className="w-full">
         <div className="container py-12 mb-12">
           <h1 className="max-w-full text-xl text-center font-bold leading-[107%] sm:max-w-none sm:text-[60px] mb-8">
-            Features
+            Our Advantages
           </h1>
           <BentoDemo />
         </div>
