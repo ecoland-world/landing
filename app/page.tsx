@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Hero from "@/assets/hero1.png";
-import Splash from "@/assets/splash.jpg";
 import { Button } from "../components/ui/button";
 import { OrbitingCirclesDemo } from "../components/magicui/orbiting-circles-demo";
 import { GameSwiper } from "../components/Swiper/game-swiper";
 import { BentoDemo } from "../components/magicui/bento-grid-demo";
 import { Supporters } from "../components/supporters";
-import { Gamepad2 } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
